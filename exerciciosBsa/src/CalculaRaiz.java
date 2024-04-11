@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class CalculaRaiz {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero = teclado.nextInt();
+        
+        if( numero >= 0 ) {
+            double resultado = Math.sqrt(numero);
+            System.out.println(resultado);
+        }
+    }
+}

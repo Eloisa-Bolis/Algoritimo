@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class Presenca {
+
+    public static void main(String[] args) {
+        Scanner abrobora = new Scanner(System.in);
+
+        System.out.println("Aulas dadas:");
+        int aulas = abrobora.nextInt();
+
+        System.out.println("Numero de Faltas:");
+        int faltas = abrobora.nextInt();
+
+        System.out.println("Media Semestre:");
+        double media = abrobora.nextDouble();
+
+        double frequencia = (aulas - faltas)
+                / (double) aulas;
+
+        if (frequencia >= 0.75) {
+            if (media >= 7.0) {
+                System.out.println("Aprovado");
+            } else {
+                if (media < 1.8) {
+                    System.out.println("Reprovado por nota");
+                } else {
+                    System.out.println("Em Exame");
+                }
+            }
+        } else {
+            System.out.println("Reprovado por faltas");
+        }
+    }
+
+}
