@@ -1,0 +1,24 @@
+/* o usuario deve ter pelo menos 75% das horas para ganhar o certificado
+*/
+import java.util.Scanner;
+public class horasCertificado {
+    
+    public static void main(String[] args) {
+        Scanner ar = new Scanner(System.in);
+                
+        System.out.print("Quantas horas o congresso teve no total?");
+        int horasTotal = ar.nextInt();
+                
+        System.out.print("Quantas horas voce participou?");
+        int horasFeitas = ar.nextInt();
+            
+        int presenca = (int) (horasFeitas/ (double) horasTotal); 
+            
+        if (presenca >= 0.75) {           
+        System.out.print("voce participou o total de horas para ganhar um certificado"); 
+            
+        } else { 
+        System.out.print("Sinto muito mas o total de horas de participacao40 nao e compativel com o ganho do certificado");                   
+        }                              
+    }    
+}
