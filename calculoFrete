@@ -1,0 +1,21 @@
+/*
+ se o frete for inferior a 120 tera 15 reais de frete
+ */
+import java.util.Scanner; 
+public class calculoFrete {
+    
+    public static void main(String[] args) {
+    Scanner ar = new Scanner (System.in);
+    
+        System.out.print("Qual o valor da sua compra?");
+        int valor = ar.nextInt();
+        
+        if (valor <= 120) {
+            int soma = valor + 15;
+            System.out.print("Serao cobrado " + soma + " por causa do frete " );
+            
+        } else {
+            System.out.print("Sua compra esta livre de frete");
+        } 
+    }    
+}
