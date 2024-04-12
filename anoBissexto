@@ -1,0 +1,21 @@
+/*
+verificar se o ano e bissexto simples
+*/
+import java.util.Scanner;
+public class anoBissexto {
+  
+    public static void main(String[] args) {
+    Scanner ar = new Scanner (System.in);
+
+        System.out.print("informe um ano : ");
+        int ano = ar.nextInt ();
+        
+        int soma = ano % 4;        
+        if ( soma == 0 ) {
+            System.out.print("O ano e bissexto ");
+            
+        } else {
+            System.out.print("O ano nao e bissexto ");
+        }        
+    }    
+}
