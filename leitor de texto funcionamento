@@ -1,0 +1,15 @@
+/*
+ leitor de texto
+ */
+import java.util.Scanner;
+public class leitor_de_texto {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in); 
+    
+        String palavra = leitor.next ();
+        String mensagem = leitor.nextLine ();
+        
+    }
+    
+}
