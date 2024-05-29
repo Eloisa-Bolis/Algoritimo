@@ -1,0 +1,26 @@
+/*
+ fazer uma conta de soma, divisão e a diferença 
+ */
+import java.util.Scanner;
+public class conta_de_etc {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in); 
+
+        System.out.print("informe o primeiro valor");
+        double valor1 = leitor.nextDouble ();
+        
+        System.out.print("informe o segundo valor");
+        double valor2 = leitor.nextDouble ();
+        
+        double soma = valor1 + valor2;
+        System.out.println("O resultado da soma e:" + soma);
+        
+        double menos = valor1 - valor2;
+        System.out.println("O resultado da diferenca e:" + menos);
+        
+        double multi = valor1 * valor2;
+        System.out.println("O resultado da multiplicacao e:" + multi);
+    }
+    
+}
