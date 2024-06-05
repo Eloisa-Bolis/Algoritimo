@@ -1,0 +1,28 @@
+public class CuboNumeros {
+    public static void main(String[] args) {
+        for(int numero=5; numero<=27; numero++) {
+            System.out.println( "O cubo de " + numero +
+                    ":" + (numero*numero*numero) );
+        }
+    }
+    
+}
+
+import java.util.Scanner;
+public class some10numeros {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner (System.in);
+        
+        int valor, total = 0;
+        for(int i=1; 1 <=10; i++) {
+            
+            valor = leitor.nextInt();
+            
+            total = total += valor ;
+            
+        }
+            System.out.println("O resultado e:" + total );
+        
+    }
+    
+}
