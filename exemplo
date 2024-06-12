@@ -1,0 +1,38 @@
+/*
+ler um numero indefinido, exiba somatorio,quantidade, media, maximo e o minimo
+*/
+
+import java.util.Scanner;
+public class putaria {
+    public static void main(String[] args) {
+        Scaner leitor = new Scaner (System.in);
+        double valorAtual;
+        double soma = 0.0, maximo, minimo, media;
+        int quantidade = 0;
+        
+        valorAtual = maximo = minimo = media = leitor.nextDouble();
+        while(valorAtual != 0) {
+            quantidade++;
+        if(valorAtual > maximo ) {
+            soma = soma + valorAtual;
+        } else {
+            if(valorAtual < minimo) {
+                minimo = valorAtual;
+                    
+            }
+        }
+        valorAtual = leitor.nextDouble();
+        
+        }
+        if(quantidade != 0 ) {
+            media = soma / quantidade;
+            System.out.println("somatorio" + soma);
+            System.out.println("quantidade" + quantidade);
+            System.out.println("media" + media);
+            System.out.println("maximo" + maximo);
+            System.out.println("minimo" + minimo);
+            
+        }
+    }
+    
+}
