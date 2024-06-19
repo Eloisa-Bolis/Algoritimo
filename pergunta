@@ -1,0 +1,73 @@
+public class Exercicio_cpf {
+    
+    public static void main(String[] args) {
+        
+        String myCPF = "05908897027";
+        
+        for(int n=0; n < myCPF.length(); n++ ) {                       ?length
+  //          char digi = mycpf.charAt( n );                           ?
+            String digiS = myCPF.substring( n, n+1);                   ?
+            int digito = Interger.parseInt( digiS );                   /
+            
+            System.out.println(digiS + " - " + (digito*2) );
+ //           System.out.prinln(digi + " - " + digis );
+    }       
+       
+            
+    }
+    
+}
+
+perguntar onde tem ponto de interogação
+
+
+
+
+
+
+
+import java.util.Scanner;
+public class cpf_valido {
+
+    
+    public static void main(String[] args) {
+        
+    }
+        Scanner leitor = new Scanner (System.in);
+        
+       // String myCPF = "05908897027";
+        System.out.println("digite seu cpf");
+        String myCPF = leitor.nextLine();
+        
+        int DV1 = Integer.parseInt( myCPF.substring(9, 10) );
+        int DV2 = Integer.parseInt( myCPF.substring(10) );
+        
+        int soma = 0;
+                
+        for (int n=0; n< myCPF.length() -2; n++ ) {
+            String digiS = myCPF.substring( n, n+1);
+            int digito = Integer.parseInt ( digiS );
+            soma = soma + (digito * (10-n) ) ;
+        }
+            int resto = soma % 11;
+            int DV1calc = (resto >1 ? 11-resto : 0);
+            
+            if (DV1 != DV1calc) {
+                System.out.println("CPF INVALIDO SEU COCO");
+            } else {
+                
+            
+            int soma1 = 0;
+                
+        for (int n=0; n< myCPF.length() -2; n++ ) 
+        {
+            String digiS = myCPF.substring( n, n+1);
+            int digito = Integer.parseInt ( digiS );
+            
+            soma1 = soma1 + (digito * (10-n) ) ;
+        }
+            soma1 = soma1 + DV1calc *2;
+     
+    }
+    
+}
