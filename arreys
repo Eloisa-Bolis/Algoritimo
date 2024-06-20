@@ -1,0 +1,72 @@
+/*
+        criação de arrays
+        numeros = new int [20]
+        palavreas = new string [10]
+        valores = new doble [4] [20]
+        contas = new bolean [5]
+        
+        *começa sempre do zero
+        
+        int [5] [i] *nome
+        
+        vetor = new int[10]
+        vetor[1] = 135;
+        *o "andar" 1 vai ficar com o valor 135
+        
+        *assim vc pode mudar o valor em caso de um laço ou algo do tipo
+        */
+
+
+import java.util.Scanner;
+public class Arrays {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        int[] variavel = new int [10];
+        
+        for(int indice=0; indice <10; indice++) {           
+//      for(int indice=0; indice <length; indice++) {  *assim se voce quiser almentar o arrays não precisa mudar o laço            
+            variavel[indice] = leitor.nextInt();
+        }
+        
+        for(int indice=0; indice <10; indice++) {
+//      for(int indice=0; indice <length; indice++) {  *assim se voce quiser almentar o arrays não precisa mudar o laço            
+            System.out.println( variavel[indice] );
+        }
+    
+        
+    }
+    
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+public class ArreyAtiv1 {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        double[] Ele = new double [10];
+        double soma = 0;
+        double med = 0;
+
+                
+        for(int i=0; i<Ele.length; i++){
+            Ele[i] = leitor.nextDouble();
+              
+        }
+        for(int i=0; i<Ele.length; i++){    
+            soma += Ele[i];
+            
+        }
+
+        med = soma/10;
+        System.out.println("O resultato da media eh:" + med);
+        
+    }
+    
+}
