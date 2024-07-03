@@ -1,0 +1,44 @@
+/*
+ 10 alunos. Armazenar nome+2notas// Media de cada aluno + por prova + media geral// Nota max+mini.
+Maior e menor media. quantos estao abaixo e acima da media geral
+ */
+import java.util.Scanner;
+public class MedAlunoArreys {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        String [] Nomes = new String[10];
+        double [][] Notas = new double [10][2];
+        
+        for(int i=0 ; i<10 ; i++ ){
+            System.out.println("nome do aluno");
+            Nomes [i] = leitor.nextLine();   
+        //Não colocar nextLine e double junto porque buga    
+        }
+        for(int a=0 ; a<10 ; a++){
+            System.out.println("notas de"  + Nomes[a]);
+            for(int n=0 ; n<2 ; n++){
+                Notas[a][n] = leitor.nextDouble();
+            }
+        }
+        // apartir daqui ei nao entendi nada
+        double[] MediaAluno = new double [10];
+        double[] MediaAvaliacao = new double [2];
+        double MediaGeral;
+        
+        for(int alu=0 ; alu<10 ; alu++){
+            
+            for(int n=0 ; n<2 ; n++){
+               MediaAluno[alu] += Notas[alu][n];
+               MediaAvaliacao[n]+= Notas[alu][n];
+            }
+            MediaAluno[alu]/= 2.0;
+        }
+        MediaAvaliacao[o]/= 10.0;
+        MediaAvaliacao[1]/= 10.0;
+        MediaGeral =(MediaAvaliacao[o] + MediaAvaliacao[1])/2.0;
+        
+    }
+    
+}
