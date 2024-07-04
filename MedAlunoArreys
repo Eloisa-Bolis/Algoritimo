@@ -18,7 +18,7 @@ public class MedAlunoArreys {
         }
         for(int a=0 ; a<10 ; a++){
             System.out.println("notas de"  + Nomes[a]);
-            for(int n=0 ; n<2 ; n++){
+            for(int n=0 ; n<2 ; n++){                              ????????????
                 Notas[a][n] = leitor.nextDouble();
             }
         }
@@ -35,9 +35,9 @@ public class MedAlunoArreys {
             }
             MediaAluno[alu]/= 2.0;
         }
-        MediaAvaliacao[o]/= 10.0;
+        MediaAvaliacao[0]/= 10.0;
         MediaAvaliacao[1]/= 10.0;
-        MediaGeral =(MediaAvaliacao[o] + MediaAvaliacao[1])/2.0;
+        MediaGeral =(MediaAvaliacao[0] + MediaAvaliacao[1])/2.0;
 
 
 
