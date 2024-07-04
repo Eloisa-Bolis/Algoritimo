@@ -67,6 +67,21 @@ public class MedAlunoArreys {
             }    
            
         }
+
+       int acima = 0;
+       int abaixo = 0;
+
+       for(int a =0; a<10 ; a++){
+           if(MediaAluno[a] > MediaGeral){
+           acima++;
+           }
+           if(MediaAluno[a] < MediaGeral){
+           abaixo++;
+           }
+       }
+       System.out.println("Acima : " + acima);
+       System.out.println("abaixo" + abaixo);
+
     }
     
 }
