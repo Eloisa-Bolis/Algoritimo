@@ -38,7 +38,35 @@ public class MedAlunoArreys {
         MediaAvaliacao[o]/= 10.0;
         MediaAvaliacao[1]/= 10.0;
         MediaGeral =(MediaAvaliacao[o] + MediaAvaliacao[1])/2.0;
+
+
+
+
+
+
+        double MaxiNota = 0;
+        double MiniNota = 0;
         
+        for(int n=0 ; n<10 ; n++){
+            if(Nota[n] > MaxiNota){
+               MaxiNota = Nota[n]; 
+            }
+            if(Nota[n] < MiniNota){
+               MiniNota = Nota[n]; 
+        }
+            
+        double MaiorMedNota = 0;
+        double MenorMedNota = 0;
+        
+        for(int M=0 ; M<10 ; M++){
+            if(MediaAluno[M] > MaiorMedNota){
+               MaiorMedNota = MediaAluno[M]; 
+            }
+            if(MaiorMedNota[M] < MenorMedNota){
+               MenorMedNota = MaiorMedNota[M]; 
+            }    
+           
+        }
     }
     
 }
