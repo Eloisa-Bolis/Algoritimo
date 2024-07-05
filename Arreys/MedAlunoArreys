@@ -41,33 +41,57 @@ public class MedAlunoArreys {
 
 
 
-
-
-
-        double MaxiNota = 0;
-        double MiniNota = 0;
+        double Max = MediaAluno[0];
+        double Min = MediaAluno[0];
         
-        for(int n=0 ; n<10 ; n++){
-            if(Nota[n] > MaxiNota){
-               MaxiNota = Nota[n]; 
+        for(int n=1 ; n<MediaAluno.length ; n++){
+            if(MediaAluno[n] > Max){
+               Max = MediaAluno[n]; 
             }
-            if(Nota[n] < MiniNota){
-               MiniNota = Nota[n]; 
+            if(Min > MediaAluno[n]){
+               Min = MediaAluno[n]; 
+        }
+          
+        double [] maxNota = new double[2];
+        double [] minNota = new double[2]; 
+        
+        for(int n=0 ; n<maxNota.length ; n++){
+            maxNota[n] = Notas[0][n];
+            minNota[n] = Notas[0][n];
+        }
+        for(int a=1 ; a<Notas.length ; a++){       //porque começa com 0?
+            for(int n=0 ; n<Notas[a].length ; n++){
+                if(Notas[a][n] > maxNota[n]){
+                    maxNota[n] = Notas[a][n]; 
+                }
+                if(Notas[a][n] < minNota[n]){
+                    minNota[n] = Notas[a][n]; 
+            }
         }
             
-        double MaiorMedNota = 0;
-        double MenorMedNota = 0;
+            
+    /*     double MaiorNota = Notas[0][0];
+        double MenorNota = Notas[0][0];
         
-        for(int M=0 ; M<10 ; M++){
-            if(MediaAluno[M] > MaiorMedNota){
-               MaiorMedNota = MediaAluno[M]; 
-            }
-            if(MaiorMedNota[M] < MenorMedNota){
-               MenorMedNota = MaiorMedNota[M]; 
-            }    
-           
-        }
+        for(int F=1 ; F<10 ; F++){
+            for(int M=0 ; M<Notas.length ; M++){
+                if(Notas[F][M] > MaiorNota){
+                    MaiorNota = Notas[F][M]; 
+                }
+                if(Notas[F][M] < MenorNota){
+                    MenorNota = Notas[F][M]; 
+                }    
+            }   nesse ele pega a maior e a menor nota de todas
+                 
+        } 
+    */
+        
+        System.out.println("Media Max " + Max);
+        System.out.println("Media Min" + Min);
+        System.out.println("Nota Max" + maxNota);
+        System.out.println("Nota Mim" + mimNota);
 
+       
        int acima = 0;
        int abaixo = 0;
 
