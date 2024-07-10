@@ -1,0 +1,11 @@
+  Busca linear==
+
+int indice;
+for(indice = 0; indice < valores.length &&
+        numero != valores[indice]; indice++) {                                            ??????????????????//?
+}   
+if( indice == valores.length ) {
+    System.out.println("Não encontrei o elemento");
+} else {
+    System.out.println("o elemento esta na posicao " + indice);
+}
