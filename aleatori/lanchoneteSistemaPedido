@@ -1,0 +1,30 @@
+/*
+ A lanchonete tem varias opções para escolher e tem que calcular o pedido
+ */
+import java.util.Scanner;
+public class Pedido_lanchonete {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Digite oque vc deseja pedir");
+    System.out.println("[1]coxinha");
+    System.out.println("[2]risoles");
+    System.out.println("[3]pao de queijo");
+   
+    double um = leitor.nextDoule ();
+    double dois = leitor.nextDoule ();
+    double tres = leitor.nextDoule ();
+    
+    System.out.println("[4]agua");
+    System.out.println("[5]suco");
+    System.out.println("[6]cha");
+    double quatro = leitor.nextDoule ();
+    double cinco = leitor.nextDoule ();
+    double seis = leitor.nextDoule ();
+    
+    
+    
+    }
+    
+}
