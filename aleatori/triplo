@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Triplo {
+    public static void main(String[] args) {
+          
+        System.out.println("escreva 10 numeros");
+        Scanner leitor = new Scanner(System.in);
+        
+        for( int numero=1; numero<=10; numero++) {
+           int valor =  leitor.nextInt (); 
+           int resultado = valor * 3;
+           System.out.println("o triplo de" + valor +
+                   ":" + resultado );
+           
+       }
+    }
+    
+}
