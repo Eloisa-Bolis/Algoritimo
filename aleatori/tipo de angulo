@@ -1,0 +1,26 @@
+/*
+ veja se o angulo é <90(agudo) , ==90(reto) , >90(obtuso)
+ */
+import java.util.Scanner;
+public class Que_tipo_de_angulo {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+
+        System.out.print("informe um angulo para saber o seu tipo");
+        double angulo = leitor.nextDouble();
+        
+        if( angulo == 90 ) {
+           System.out.println("Angulo reto");
+        }
+        else{
+            if( angulo < 90) {
+                System.out.println("Angulo agudo");
+            }
+            else {
+                System.out.println("Angulo obtuso");
+            }
+        }
+    }
+    
+}
