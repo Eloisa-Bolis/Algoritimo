@@ -1,0 +1,5 @@
+Ex:  final String Ufpadrao = "RS";
+     final double MEDIA = 7.0;
+     final int[] PESOSAVAL = { 2, 2, 1};
+
+* Essa porra faz a variavel ficar fixa, não da pra trocar
