@@ -9,3 +9,7 @@ if( indice == valores.length ) {
 } else {
     System.out.println("o elemento esta na posicao " + indice);
 }
+
+
+  Busca Binaria==
+
