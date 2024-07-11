@@ -1,4 +1,4 @@
-  Busca linear==
+      Busca linear==
 
 int indice;
 for(indice = 0; indice < valores.length &&
@@ -11,5 +11,28 @@ if( indice == valores.length ) {
 }
 
 
-  Busca Binaria==
+        Busca Binaria==
+
+incio = 0;
+fim = V.length - 1;
+do {
+  pivo = (inicio + fim) /2;
+  if( chave > V[pivo]){     //chave maior que
+    inicio = pivo +1;
+  } else {
+    if( chave < V[pivo] ) {
+      fim = pivo -1;
+    }
+  }
+} while (chave != V[pivo] &&
+          inicio <= fim );
+          // fim > inicio
+if( inicio > fim ) {
+    //nao encontrou
+} else {
+    //encontrou
+    // posicao = pivo
+}
+
+
 
