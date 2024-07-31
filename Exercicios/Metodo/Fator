@@ -1,0 +1,24 @@
+/*
+criar um metodo para calcular o fatorial de um numero, sendo informado apenas o numero como parametro
+ */
+public class Fatorial {
+    public static long /*int*/ fator (int num){
+        
+        long produto = 1;
+        if(num <= 1){
+            return 1;
+        } else {
+            for(int i = num ; i > 1 ; i--){
+                produto = produto * i;
+            }
+        }
+
+        return produto;
+    }
+    public static void main(String[] args){
+        System.out.println( fator (7));
+        System.out.println( fator (6));
+        System.out.println( fator (5));
+        
+    }
+}
