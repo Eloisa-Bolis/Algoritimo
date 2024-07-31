@@ -1,0 +1,18 @@
+/*
+criar um metodo para calcular qualquer raiz, sendo imformado como parametro o indece e o radicando
+ */
+public class raizIndice_eo_Radical {
+    public static double raiz( double indice, double rad ) {        
+         
+        double resultado = Math.pow(rad, (1.0/indice));
+         
+        return resultado; 
+    }
+    public static void main(String[] args){
+        System.out.println( raiz (5, 32));
+        System.out.println( raiz (3, 1000));
+        System.out.println( raiz (4, 100_000_000));
+        System.out.println( raiz (6, 4096));
+    }
+    
+}
