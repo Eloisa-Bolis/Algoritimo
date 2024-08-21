@@ -1,0 +1,26 @@
+/*
+declarar 3 variáveis double(notas)
+atribua valores(quaisquer)
+declare 1 variável  double (soma de notas)
+declare 1 variável  double (media aritimetica)
+imprimir soma e media 
+*/
+public class CalculoMedia {
+
+    public static void main(String[] args) {
+        double nota1, nota2, nota3;
+        nota1 = 10.0;
+        nota2 = 6.7;
+        nota3 = 7.8;
+        
+        double somaNotas;
+        somaNotas = nota1 + nota2 + nota3;
+        
+        double mediaArit;
+        mediaArit = somaNotas / 3;
+        
+        System.out.println( "Soma = " + somaNotas);
+        System.out.println( "Media = " + mediaArit);
+    }
+    
+}
