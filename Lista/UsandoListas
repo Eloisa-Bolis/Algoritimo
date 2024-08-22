@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+public class UsandoListas {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        ArrayList< String > minhaLista = new ArrayList();
+        
+        int NumElementos = minhaLista.size();
+        System.out.println("Numero de elementos: " + NumElementos);
+        //(size)quantidade de elementos
+        
+        boolean estaVazia = minhaLista.isEmpty();
+        System.out.println("Esta vazia? " + estaVazia);
+        //(isEmpty)ver se tem algo dentro sim ou não
+        
+        minhaLista.add("banana");
+        minhaLista.add("leite");
+        minhaLista.add("pao");
+        minhaLista.add("presunto");
+        minhaLista.add("leite condensado");
+        //(add)adicina na memoria as coisas ne ordem que foi colocada
+        
+        String elemento = minhaLista.get(2);
+        System.out.println(elemento);
+        //aqui ele pega o elemento no caso(pao)
+        
+        minhaLista.add(2, "desinfetante");
+        //ele insere no meio 2=desinfetante 3=pao 4=presunto...
+        
+        boolean encontrou = minhaLista.contains("vasoura");
+        System.out.println("Encontro vassoura?" + encontrou);
+        //(contains) serve para ver se tem ou nao ex=false
+        encontrou = minhaLista.contains("leite");
+        System.out.println("Encontro vassoura?" + encontrou);
+        //(contains) serve para ver se tem ou nao ex=true
+        
+        int indice = minhaLista.indexOf("presunto");
+        System.out.println("Indice de presunto: " + indice);
+        //(indexOf) procura em que indice o item esta ex= 4
+        indice = minhaLista.indexOf("batata");
+        System.out.println("Indice de presunto: " + indice);
+        //(indexOf) caso não tenha vai ir = -1
+        
+        
+        
+    }
+    
+}
