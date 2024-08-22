@@ -52,7 +52,7 @@ public class UsandoListas {
         
         boolean remove = minhaLista.remove("pao");
         // remove e fala true
-        boolean remove = minhaLista.remove("cafe");
+        remove = minhaLista.remove("cafe");
         // fala false porque nao existe esse item
         
     }
