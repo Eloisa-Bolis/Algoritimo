@@ -16,16 +16,17 @@ public class UsandoListas {
         System.out.println("Esta vazia? " + estaVazia);
         //(isEmpty)ver se tem algo dentro sim ou não
         
-        minhaLista.add("banana");
-        minhaLista.add("leite");
-        minhaLista.add("pao");
-        minhaLista.add("presunto");
-        minhaLista.add("leite condensado");
+        minhaLista.add("banana");  //0
+        minhaLista.add("leite");   //1
+        minhaLista.add("pao");     //2
+        minhaLista.add("presunto");//3
+        minhaLista.add("leite condensado");//4
         //(add)adicina na memoria as coisas ne ordem que foi colocada
+        //vai sempre adicionar no final da lista, mesmo se ja tiver
         
         String elemento = minhaLista.get(2);
         System.out.println(elemento);
-        //aqui ele pega o elemento no caso(pao)
+        //aqui ele pega o elemento do indice escolido no caso(pao)
         
         minhaLista.add(2, "desinfetante");
         //ele insere no meio 2=desinfetante 3=pao 4=presunto...
@@ -45,6 +46,14 @@ public class UsandoListas {
         //(indexOf) caso não tenha vai ir = -1
         
         
+        minhaLista.remove("banana"); 
+        minhaLista.remove(0);
+        //(remove)remove a "banana".  0="leite" 1="desifetante"
+        
+        boolean remove = minhaLista.remove("pao");
+        // remove e fala true
+        boolean remove = minhaLista.remove("cafe");
+        // fala false porque nao existe esse item
         
     }
     
