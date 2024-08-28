@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+import java.util.Stack;
+
+public class AprenPilhas {
+
+    public static void main(String[] args) {
+        
+        Stack < String > pilha = new Stack();
+        
+        System.out.println(pilha.size());   //pede o temanho
+        System.out.println(pilha.isEmpty());     //pede se ta cheia
+        
+        pilha.push("banana");   //Adiciona na pilha
+        pilha.push("manga");
+        pilha.push("sapoti");
+        pilha.push("maca");
+        System.out.println(pilha.size());   //respota 4
+        System.out.println(pilha.peek());     //olha o topo da pilha: maca
+        
+        System.out.println(pilha.pop());   //tira o que esta no topo da pilha
+        System.out.println(pilha.pop());
+        System.out.println(pilha.pop());
+        
+    }
+    
+}
