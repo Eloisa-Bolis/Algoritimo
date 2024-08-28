@@ -1,0 +1,37 @@
+/*
+Escreva um programa em Java que crie uma lista para armazenar valores inteiros. Faça a leitura,
+a partir do teclado, de 25 valores e armazene na lista. Crie uma segunda lista para numeros
+inteiros. Percorra a primeira lista e remova todos os valores armazenados que são ímpares,
+inserindo-os na segunda lista.
+
+ */
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Exer03 {
+    public static void main(String[] args) {
+    
+        Scanner leitor = new Scanner(System.in);
+        ArrayList<Integer> lista1 = new ArrayList<>();
+        ArrayList<Integer> lista2 = new ArrayList<>();
+        
+
+        System.out.println("Digite 25 numeros inteiros:");
+        for (int i = 0; i < 25; i++) {
+            int numero = leitor.nextInt();
+            lista1.add(numero);
+        }
+
+        for (int i = 0; i < lista1.size(); i++) {
+            if (lista1.get(i) % 2 != 0) {
+                lista2.add(lista1.get(i));
+                lista1.remove(i);
+                i--;  // Ajusta o índice depois da remoção
+            }
+        }
+
+        System.out.println("Lista 1 apos remocao de impares: " + lista1);
+        System.out.println("Lista 2 com numeros impares: " + lista2);
+        leitor.close();
+    }
+}
