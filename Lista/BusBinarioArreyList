@@ -1,0 +1,47 @@
+/*
+Busca binaria + Array list     não esta funcionabdo
+ */
+
+import java.util.ArrayList;
+
+public class BusBinarioArreyList {
+
+    public static void main(String[] args) {
+        
+        ArrayList< Integer > vetor = new ArrayList();
+        
+        for(int i=0; i< 10_000_000; i++){
+            vetor.add ((int) Math.rint( Math.random() * 1_000_000 ));
+        }
+         
+        int inicio = 0; 
+        int fim = vetor.size() - 1;
+        int pivo;
+        
+        int numero = (int) Math.rint( Math.random() * 1_000_000 );
+        
+            
+        do {
+            pivo = (int) ((inicio + fim) /2);
+            if( numero /*chave*/ > vetor.get(pivo)){     //chave maior que
+                inicio = pivo +1;
+            } else {
+                    
+                if( numero/*chave*/ < vetor.get(pivo) ) {
+                    fim = pivo -1;
+                }
+            }
+        } while ( numero /*chave*/ != vetor.get(pivo) &&
+            inicio <= fim );
+                // fim > inicio
+            if( inicio > fim ) {
+                System.out.println("Nao encontrou");
+                //nao encontrou
+            } else {
+                System.out.println("Encontrou = " + pivo);
+                //encontrou
+                // posicao = pivo
+            }
+    }
+    
+}
