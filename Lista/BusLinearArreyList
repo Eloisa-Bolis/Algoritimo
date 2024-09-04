@@ -1,0 +1,27 @@
+/*
+Busca Linear em Array list
+ */
+import java.util.ArrayList;
+
+public class BusLinearArreyList {
+    
+    public static void main(String[] args) {
+        
+        ArrayList <Integer> vetor = new ArrayList();
+        
+        for(int i=0; i< 10_000_000; i++){
+            vetor.add ((int) Math.rint( Math.random() * 1_000_000 ));
+        }
+    
+        for(int i = 0; i < 100; i++) {                                     
+            int comp;
+            int numero = (int) Math.rint( Math.random() * 1_000_000 );
+        
+            for(comp = 0; comp < vetor.size() && numero != vetor.get(i); comp++){                
+            }
+            
+            System.out.println("Comparacoes: " + comp);   
+        }    
+    }
+    
+}
