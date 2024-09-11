@@ -1,0 +1,87 @@
+/*
+conjuntos explicação
+ */
+import java.util.Set;               //interface (conjunto aleatorio, não especifico) não tem implementação(não é real)
+import java.util.HashSet;           //classe
+import java.util.LinkedHashSet;     //classe
+import java.util.TreeSet;           //classe    (garante ordem alfabetica)
+
+public class Conjuntos {
+
+    public static void main(String[] args) {
+        Set< String > TG = new HashSet();     //pra não dar problema é melhor usar o modelo set
+                                                    //Assim todos são vistos como set
+        TG.add("Fabiana");
+        TG.add("Debora");
+        TG.add("Fernanda");        
+        
+        for(String elemento : TG) {     //pra cada elemento do conjunto insira ele
+            System.out.println(elemento);
+        }
+                
+        
+        Set< String > TR = new LinkedHashSet();
+        
+        TR.add("Raquel");
+        TR.add("Raquel Lima");
+        TR.add("Marta");
+      
+        
+        Set< String > GE = new HashSet();
+        
+        GE.add("Fernanda");
+        GE.add("Fabiana");
+        
+        
+        Set< String > JF = new TreeSet();
+        
+        JF.add("Debora");
+        JF.add("Adriana");
+        JF.add("Raquel Martins");
+        JF.add("Debora Magadi");
+        
+        
+        //  Dados que serao utilizados nas operações de confuntos
+        Set< String > GEuJF = new HashSet();  // GE uniao JF
+        Set< String > JFiTR = new HashSet();  // JF intersesao TR
+        boolean GEcTG;  // GE esta contido em TR ?
+        Set< String > TG_GE = new HashSet();  // TG diferente GE
+        Set< String > TGdsJF = new HashSet();  // TG diferença simetrica JF
+        
+        // OPERACAO DE DOIS CONJUNTOS
+        System.out.println("UNIAO DE CONJUNTO");
+        GEuJF.addAll( GE );
+        GEuJF.addAll( JF );
+        for(String elemento : GEuJF) {     //pra cada elemento do conjunto insira ele
+            System.out.println(elemento);
+        }
+        
+        // OPERACAO DE INTERSECCAO DE DOIS CONJUNTOS
+        System.out.println("INTERSECCAO DE CONJUNTOS");
+        JFiTR.addAll( JF );  // O que for repetido não bota
+        JFiTR.addAll( TR );  // Deixa apenas o conjunto original              
+        for(String elemento : JFiTR) {     //pra cada elemento do conjunto insira ele
+            System.out.println(elemento);
+        }
+        
+        // OPERACAO DE "ESTA CONTIDO?" DOIS CONJUNTOS
+        System.out.println("ESTA CONTIDO DE CONJUNTO");
+        GEcTG = TG.containsAll( GE );
+        System.out.println( GEcTG );
+        
+        // OPERACAO DE DIFERENÇA DE DOIS CONJUNTOS
+        System.out.println("DIFERENCA DE CONJUNTOS");
+        TG_GE.addAll( TG );  
+        // conjunto temporario para guardar a interseccao
+        Set< String > temp = new HashSet();
+        temp.addAll( TG ); 
+        temp.retainAll( GE );  // Deixa apenas os elementos que já exintem de novo
+        
+        TG_GE.removeAll( temp );  
+        
+        for(String elemento : TG_GE) {                                           
+            System.out.println(elemento);                    
+        }
+     }
+    
+}
